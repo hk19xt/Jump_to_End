@@ -14,10 +14,11 @@ public class Jump_to_End {
     return true;
     }
     
-    while(first_position<=end_position){ //If 
-      end_position = Math.max(end_position, first_position+userArray[first_position++]);
-        if(end_position>=userArray.length - 1){
-        return true;}
+    int lastArrayPosition = userArray.length - 1;
+    for(int i = userArray.length - 2; i>=0; i--){
+      if(i + userArray[i]>=lastArrayPosition){
+        lastArrayPosition = i;
+      }
     }
   return false;
   }
