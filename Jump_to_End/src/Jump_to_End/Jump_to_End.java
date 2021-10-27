@@ -14,13 +14,13 @@ public class Jump_to_End {
             return true;
         }
 
-        int lastArrayPosition = userArray.length - 1;
-        for(int i = userArray.length - 2; i>=0; i--){
-            if(i + userArray[i]>=lastArrayPosition){
-                lastArrayPosition = i;
+        int lastArrayPosition = userArray.length - 1; //The lastposition of the array which is the array length - 1.
+        for(int i = userArray.length - 2; i>=0; i--){ //Calculate from the second last position of the array.
+            if(i + userArray[i]>=lastArrayPosition){ //If the last position is lower than equal to the second last position value and the second position value,
+                lastArrayPosition = i; //then last position is moved onto the next last position.
             }
-            return true;
+            return true;//If i + userArray[i] is larger and equal to the last array position, then it returns true, which means that the first element can jump to the end position of the array. 
         }
-        return false;
+        return false;//If i + userArray[i] is less than the last array po
     }
 }
